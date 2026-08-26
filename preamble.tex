@@ -1,0 +1,169 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[10pt]{article} % 10pt saves space vs default 11pt
+
+\usepackage{ragged2e}
+\usepackage{latexsym}
+\usepackage[]{fullpage}
+\usepackage{titlesec}
+ \usepackage{marvosym}
+ \usepackage{microtype} % Professional font tweaks
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[none]{hyphenat}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+%\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+%\raggedright % Add to preamble or before sections
+
+
+\linespread{1.17}  % Multiplies default line spacing
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=2pt} % Global bullet spacing
+
+%\usepackage[sfdefault]{noto-sans}  % Sans-serif, ATS-friendly  
+ \usepackage{accsupp}              % For ATS-readable text behind symbols
+\newcommand{\atslabel}[1]{\BeginAccSupp{ActualText={#1}}\EndAccSupp{}}
+% Example: \atslabel{Phone:}+34 607300732 (helps ATS parse icons)
+
+% Custom AllocQ "icon" from JPG
+% AllocQ mark: use the PNG when present, else fall back to a FontAwesome glyph
+% so the CV still compiles in environments without the binary asset.
+\IfFileExists{AllocQ_new_icon.png}{%
+  \newcommand{\faAllocQ}{\raisebox{-0.15\height}{\includegraphics[height=1em]{AllocQ_new_icon.png}}}%
+}{%
+  \newcommand{\faAllocQ}{\faChartLine}%
+}
+
+
+
+% ---------- CONTACT ----------
+% Public placeholder. The real number is injected at build time via contact.tex,
+% which is gitignored and never committed.
+\providecommand{\phonenum}{+61 4XX XXX XXX}
+\IfFileExists{contact.tex}{\input{contact.tex}}{}
+
+% ----------FONT OPTIONS----------
+% sans-serif
+%\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+%\usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc} 
+
+
+
+ %serif
+ %\usepackage{CormorantGaramond}
+ %\usepackage{charter}
+ %\usepackage[T1]{fontenc} 
+
+
+% Adjust Height accordingly
+
+%\usepackage[top=0.6in, bottom=0.6in, left=0.6in, right=0.6in]{geometry}
+% Replace manual \vspace with:
+%\usepackage[scale=0.93]{geometry}  % One consistent setting
+
+
+
+%\usepackage[scale=0.93, a4paper]{geometry}  % A4 is slightly taller than letter
+
+%\usepackage[a4paper, scale=0.93, includefoot]{geometry}  % Added includefoot
+
+%\usepackage[paperheight=11in, paperwidth=8.5in, margin=0.2in]{geometry}
+
+\usepackage[a4paper, top=0.25in, bottom=0.25in, left=0.3in, right=0.3in]{geometry} %(Works fine)
+
+
+\setlength{\tabcolsep}{0.08in}  % Tighter table spacing
+ \setlist[itemize]{leftmargin=0.12in}  % Reduce bullet indentation
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small\justifying{#1}\vspace{-2pt}
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{#1 #2 #3 #4}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\vcenter{\hbox{\tiny$\bullet$}}$]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

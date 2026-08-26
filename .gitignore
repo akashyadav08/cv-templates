@@ -1,0 +1,6 @@
+contact.tex
+out/
+build/
+*.aux
+*.log
+*.pdf
