@@ -1,4 +1,8 @@
 
+% Overleaf has no AllocQ_new_icon.png; fall back to a glyph present in every
+% fontawesome5 install so the document still compiles when pasted in.
+\IfFileExists{AllocQ_new_icon.png}{}{\renewcommand{\faAllocQ}{\faGlobe}}
+
 %----------HEADING----------
 \begin{center}
 {\Huge \scshape Akash Yadav} \\[3pt]
@@ -7,13 +11,11 @@
 \raisebox{-0.1\height}\faPhone\ \underline{\href{tel:\phonenum}{\phonenum}} |
 \href{mailto:yadav@bse.eu}{\raisebox{-0.2\height}\faEnvelope\  \underline{akash.yadav@bse.eu}} |
 \href{https://www.linkedin.com/in/akash-yadav-bse}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/akash-yadav-bse}} |
-\href{https://finquark.my.canva.site/}
-{\raisebox{-0.2\height}\faGlobe\ \underline{finquark (website)}} |
 \href{https://github.com/akashyadav08}
 {\raisebox{-0.2\height}\faGithub\ \underline{github.com/akashyadav08}} |
 \href{https://www.allocq.com/}
 {\raisebox{-0.1\height}\faAllocQ\ \underline{AllocQ}} |
-{\raisebox{-0.1\height}\faMapMarker\ Melbourne, VIC}
+{\raisebox{-0.1\height}\faMapMarker\ Melbourne, VIC} \textit{(open to relocate)}
 }
 \end{center}
 
@@ -21,8 +23,8 @@
 \noindent
 \small
 \justifying % Ensures the text is justified to both left and right margins
-% Quantitative researcher with \textbf{5 years of experience} across predictive modelling, financial time series research, backtesting, model validation, and Python/SQL analytics. Built ML and quantitative workflows for out-of-sample forecasting, systematic allocation, derivatives-risk diagnostics, and decision-support modelling. Strong interest in applying probabilistic modelling, signal research, and rigorous model evaluation to trading and wagering markets. Passed \textbf{FRM Level I} (GARP).
-Quantitative researcher with \textbf{5 years of experience} applying \textbf{probabilistic modelling and machine learning} to pricing, forecasting, and risk in fast-moving markets. Experienced in \textbf{model calibration, Monte Carlo simulation, and Bayesian inference}, with Python/SQL workflows for backtesting, out-of-sample validation, and automated data ingestion. Demonstrated trading judgment under market-making, pricing, and execution constraints (\textbf{38th globally}, IMC Prosperity 4 manual trading). Passed \textbf{FRM Level I} (GARP).
+% Quantitative researcher with \textbf{5 years of experience} across predictive modelling, financial time series research, backtesting, model validation, and Python/SQL analytics. Built ML and quantitative workflows for out-of-sample forecasting, systematic allocation, derivatives-risk diagnostics, and decision-support modelling. Strong interest in applying probabilistic modelling, signal research, and rigorous model evaluation to trading and wagering markets. Passed \textbf{FRM Part I} (GARP).
+Quantitative researcher with \textbf{5 years of experience} applying \textbf{probabilistic modelling and machine learning} to pricing, forecasting, and risk in fast-moving markets. Experienced in \textbf{model calibration, Monte Carlo simulation, and Bayesian inference}, with Python/SQL workflows for backtesting, out-of-sample validation, and automated data ingestion. Demonstrated trading judgment under market-making, pricing, and execution constraints (\textbf{38th globally}, IMC Prosperity 4 manual trading). Passed \textbf{FRM Part I} (GARP).
 
 %-----------EXPERIENCE-----------
 \vspace{-2pt}
@@ -45,7 +47,7 @@ Quantitative researcher with \textbf{5 years of experience} applying \textbf{pro
 
 \vspace{4pt}
 \resumeSubheading
-{Mercor}{05/2026 -- 08/2026}
+{Mercor}{05/2026 -- Present}
 {Independent Contractor -- LLM Evaluation}{Melbourne (Remote)}
 \vspace{-2pt}
 \resumeItemListStart
@@ -108,7 +110,7 @@ Quantitative researcher with \textbf{5 years of experience} applying \textbf{pro
 
 
 %-----------EDUCATION-----------
-\vspace{-2pt}
+\vspace{-4pt}
 \section*{Education}
 %\section{Education}
 \vspace{-2pt}
@@ -143,9 +145,9 @@ Quantitative researcher with \textbf{5 years of experience} applying \textbf{pro
 
 \resumeSubHeadingListEnd
 
-%-----------LANGUAGES AND TECHNICAL SKILLS-----------
-\vspace{-2pt}
-\section{Technical Skills and Languages}
+%-----------TECHNICAL SKILLS-----------
+\vspace{-4pt}
+\section{Technical Skills}
 \begin{itemize}[leftmargin=*, noitemsep=2, partopsep=0pt]
 \vspace{-2pt}
 \item \textbf{Pricing \& Risk Modelling:} probabilistic forecasting, model calibration, Monte Carlo simulation, expected-value estimation, market-making and execution constraints, backtesting, out-of-sample and robustness testing.
@@ -155,13 +157,6 @@ Quantitative researcher with \textbf{5 years of experience} applying \textbf{pro
 \item \textbf{Data \& Platforms:} data pipelines, relational querying and validation; Databricks, Snowflake, MySQL, Spark; Plotly, Power BI.
 \vspace{-2pt}
 \item \textbf{Statistical Computing:} PyMC, Stan/RStan, mclust, glmnet, rugarch, Gurobi, Qiskit; Bayesian inference, MCMC diagnostics, penalised likelihood, GARCH with VaR/ES.
-\vspace{0pt}
-\item \textbf{Languages:} English (Fluent), Hindi (Native), Spanish (Beginner).
-\end{itemize}
-
-% -------------------Certifications and Achievements-----------
-\begin{itemize}
-
 \vspace{4pt}
 \item \textbf{\underline{Achievements:}}\
 \begin{tabularx}{\linewidth}[t]{@{}X@{}}
@@ -169,5 +164,5 @@ $\bullet$\ \textbf{Ranked 312} / 18,000 teams globally in \textbf{IMC Prosperity
 $\bullet$\ \textbf{IBM Qiskit} Global Summer School 2025 (\textbf{Quantum Excellence} badge).
 \end{tabularx}
 \vspace{-2pt}
-\item \textbf{\underline{Certifications:}}\ \ \textbf{FRM Level I} (GARP); FRM Level II candidate, November 2026
+\item \textbf{\underline{Certifications:}}\ \ \textbf{FRM Part I} (GARP); FRM Part II candidate, November 2026
 \end{itemize}
